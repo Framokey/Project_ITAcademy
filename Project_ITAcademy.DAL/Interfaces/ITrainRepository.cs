@@ -2,7 +2,7 @@
 
 namespace Project_ITAcademy.DAL.Interfaces;
 
-public interface ITrain : IBaseRepository<Train>
+public interface ITrainRepository : IBaseRepository<Train>
 {
     
 }

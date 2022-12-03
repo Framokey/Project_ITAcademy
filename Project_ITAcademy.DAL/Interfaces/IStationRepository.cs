@@ -1,6 +1,8 @@
-﻿namespace Project_ITAcademy.DAL.Interfaces;
+﻿using Project_ITAcademy.Domain.Models;
 
-public interface IStationRepository
+namespace Project_ITAcademy.DAL.Interfaces;
+
+public interface IStationRepository : IBaseRepository<Station>
 {
     
 }

@@ -1,7 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using Project_ITAcademy.DAL;
+using Project_ITAcademy.DAL.Interfaces;
+using Project_ITAcademy.DAL.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connection = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connection));
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 

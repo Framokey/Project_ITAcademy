@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Project_ITAcademy.Models;
 using System.Diagnostics;
+using Project_ITAcademy.DAL.Interfaces;
 
 namespace Project_ITAcademy.Controllers
 {
@@ -8,13 +9,17 @@ namespace Project_ITAcademy.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IUserRepository _userRepository;
+
+        public HomeController(ILogger<HomeController> logger, IUserRepository userRepository)
         {
             _logger = logger;
+            _userRepository = userRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var response = await _userRepository.GetAllAsync();
             return View();
         }
 
