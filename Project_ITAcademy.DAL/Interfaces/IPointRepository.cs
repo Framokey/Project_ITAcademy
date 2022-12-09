@@ -2,7 +2,7 @@
 
 namespace Project_ITAcademy.DAL.Interfaces;
 
-public interface IStationRepository : IBaseRepository<Station>
+public interface IPointRepository : IBaseRepository<Train>
 {
     
 }

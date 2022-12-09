@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{D2A9B738-68C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_ITAcademy.DAL", "Project_ITAcademy.DAL\Project_ITAcademy.DAL.csproj", "{29117B11-1BC8-4EA2-8B1E-50D32A5D9919}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{A3982307-6D7A-4A67-A655-782E40ECE0D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_ITAcademy.Service", "Project_ITAcademy.Service\Project_ITAcademy.Service.csproj", "{8CA84ADB-3612-4923-B541-F293776B253A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{29117B11-1BC8-4EA2-8B1E-50D32A5D9919}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29117B11-1BC8-4EA2-8B1E-50D32A5D9919}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29117B11-1BC8-4EA2-8B1E-50D32A5D9919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CA84ADB-3612-4923-B541-F293776B253A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CA84ADB-3612-4923-B541-F293776B253A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CA84ADB-3612-4923-B541-F293776B253A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CA84ADB-3612-4923-B541-F293776B253A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{439FE51D-9D73-41BB-BFCF-41D8379562E1} = {57C59868-C2FF-4845-9FF4-D21B289564CC}
 		{29117B11-1BC8-4EA2-8B1E-50D32A5D9919} = {D2A9B738-68C5-459D-AEFE-01E7353EAE2B}
+		{8CA84ADB-3612-4923-B541-F293776B253A} = {A3982307-6D7A-4A67-A655-782E40ECE0D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3BAB0F8-8F2E-4E5C-8ED1-0D2CA788ACF0}

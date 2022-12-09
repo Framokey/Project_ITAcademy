@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Project_ITAcademy.Domain.Models
 {
@@ -7,16 +8,16 @@ namespace Project_ITAcademy.Domain.Models
     {
         public Route()
         {
-            Stations = new HashSet<Station>();
             Trains = new HashSet<Train>();
         }
 
-        public string RouteId { get; set; } = null!;
+        public int RouteId { get; set; }
         public string? Description { get; set; }
-        public string UserId { get; set; } = null!;
-
+        public int UserId { get; set; }
+        public double StartPoint { get; set; }
+        public double EndPoint { get; set; }
+        [JsonIgnore]
         public virtual User User { get; set; } = null!;
-        public virtual ICollection<Station> Stations { get; set; }
         public virtual ICollection<Train> Trains { get; set; }
     }
 }

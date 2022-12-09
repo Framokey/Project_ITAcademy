@@ -1,0 +1,27 @@
+﻿
+@model Project_ITAcademy.Domain.ViewModels.RegisterUserViewModel
+@{
+    ViewBag.Title = "Регистрация";
+    Layout = "_Layout";
+}
+
+
+
+<div class="main-page">
+    <h1 class="display-4">Добро пожаловать!</h1>
+    <div class="head_registration">
+        <form asp-controller="User" asp-action="Register">
+            <div asp-validation-summary="All"></div>
+            <label class="user_label">ФИО:</label>
+            <input asp-for="Name" class="user_input" type="text">
+            <label class="user_label">Логин:</label>
+            <input asp-for="Email" class="user_input" type="text">
+            <label class="user_label">Придумайте пароль:</label>
+            <input asp-for="Password" class="user_input" type="password">
+            <label class="user_label">Повторите пароль:</label>
+            <input asp-for="PasswordConfirm" class="user_input" type="password">
+            <button type="submit" class="register">Зарегистрироваться</button>
+        </form>
+    </div>
+</div> 
+    
