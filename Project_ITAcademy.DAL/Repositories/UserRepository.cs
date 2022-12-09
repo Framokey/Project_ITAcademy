@@ -24,9 +24,11 @@ namespace Project_ITAcademy.DAL.Repositories
             return await _db.Users.ToListAsync();
         }
 
-        public Task<User> AddAsync(User entity)
+        public async Task<User> AddAsync(User entity)
         {
-            throw new NotImplementedException();
+            await _db.Users.AddAsync(entity);
+            await _db.SaveChangesAsync();
+            return entity;
         }
 
         public Task<User> UpdateAsync(User entity)
@@ -39,9 +41,9 @@ namespace Project_ITAcademy.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<User> GetByLoginAsync(string login)
+        public async Task<User> GetByLoginAsync(string login)
         {
-            throw new NotImplementedException();
+            return await _db.Users.FirstOrDefaultAsync(x => x.Email == login);
         }
     }
 }

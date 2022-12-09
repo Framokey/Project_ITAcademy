@@ -1,0 +1,23 @@
+﻿@model Project_ITAcademy.Domain.ViewModels.LoginUserViewModel
+@{
+    ViewBag.Title = "Вход";
+    Layout = "_Layout";
+}
+
+<div class="main-page">
+    <h1 class="display-4">Добро пожаловать!</h1>
+    <form asp-controller="User" asp-action="Login">
+        <div asp-validation-summary="All"></div>
+        <div class="head_vxod">
+            <label class="user_label">Логин:</label>
+            <input asp-for="Email" class="user_input" type="text">
+            <label class="user_label">Пароль:</label>
+            <input asp-for="Password" class="user_input" type="password">
+        </div>
+        <div class="main-page_footer">
+            <input type="submit" name="submit" value="ВХОД" class="button">
+            <input asp-controller="User" asp-action="Register" name="submit" value="РЕГИСТРАЦИЯ" class="register">
+        </div>
+    </form>
+
+</div>

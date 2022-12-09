@@ -1,25 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Project_ITAcademy.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Project_ITAcademy.DAL.Interfaces;
 
 namespace Project_ITAcademy.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        private readonly IUserRepository _userRepository;
-
-        public HomeController(ILogger<HomeController> logger, IUserRepository userRepository)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _userRepository = userRepository;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> ZD_Marsh()
         {
-            var response = await _userRepository.GetAllAsync();
             return View();
         }
 
